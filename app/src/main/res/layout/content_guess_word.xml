@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.GuessWordActivity"
+    tools:showIn="@layout/activity_guess_word">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7e851496">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/topText"
+            android:id="@+id/topText"
+            android:visibility="visible"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/startButton"
+            android:layout_marginBottom="80dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:text="@string/GuessWord"
+            android:id="@+id/startButton"
+            android:background="#aeca5c"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:visibility="visible"
+            android:onClick="onButtonClick_guessWordStart"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentStart="false"
+            android:layout_centerInParent="true"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottomText"
+            android:id="@+id/bottomText"
+            android:layout_below="@+id/startButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:layout_marginTop="80dp"
+            android:textColor="#a9ffffff"
+            android:textIsSelectable="false"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/NextButton"
+            android:id="@+id/nextButton"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:background="#ffc983"
+            android:onClick="onButtonClick_nextGuessWordGame" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/GuessWord"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:autoText="false"
+        android:background="#24000000"
+        android:textAlignment="center"
+        android:textColor="#b4000000"
+        android:textIsSelectable="false"
+        android:textSize="25sp"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/infoImageGuessword"
+        android:scaleType="centerCrop"
+        android:onClick="onClick_hideImageInfo"
+        android:visibility="visible" />
+
+</RelativeLayout>

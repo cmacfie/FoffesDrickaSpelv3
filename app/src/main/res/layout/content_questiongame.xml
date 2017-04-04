@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.QuestionActivity"
+    tools:showIn="@layout/activity_questiongame"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7eff3835">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/bottomText"
+            android:id="@+id/bottomText"
+            android:visibility="visible"
+            android:textSize="40sp"
+            android:textColor="#5ccac8"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/NextButton"
+            android:id="@+id/nextButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="false"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:background="#ffc983"
+            android:onClick="onClick_nextGame" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Question"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:autoText="false"
+        android:background="#24000000"
+        android:textAlignment="center"
+        android:textColor="#b4000000"
+        android:textIsSelectable="false"
+        android:textSize="25sp"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/infoImageStory"
+        android:scaleType="centerCrop"
+        android:onClick="onClick_hideImageInfo" />
+
+</RelativeLayout>

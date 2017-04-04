@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.christoffer.foffesdrickaspelv3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="minigames.MainMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="minigames.DrinksActivity"
+            android:label="@string/title_activity_next"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <intent-filter>
+            <action android:name="minigames.DrinksActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+
+        <activity
+            android:name="minigames.PickAGameActivity"
+            android:label="@string/title_activity_pick_agame"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name=".PickAGameActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="minigames.RhymeActivity"
+            android:label="@string/title_activity_rhyme"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.QuestionActivity"
+            android:label="@string/title_activity_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.ThemeActivity"
+            android:label="@string/title_activity_theme"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.GuessWordActivity"
+            android:label="@string/title_activity_guess_word"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.AlphabetGameActivity"
+            android:label="@string/title_activity_alphabet_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.StoryActivity"
+            android:label="@string/title_activity_story"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.ReactActivity"
+            android:label="@string/title_activity_react"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="minigames.WordShuffleActivity"
+            android:label="@string/title_activity_word_shuffle" />
+        <activity
+            android:name="minigames.AddPlayersActivity"
+            android:label="AddPlayerActivity" />
+        <activity
+            android:name="minigames.SettingsActivity"
+            android:label="@string/title_activity_main2" />
+        <activity
+            android:name="minigames.HangmanActivity"
+            android:label="@string/title_activity_hangman">
+        </activity>
+    </application>
+
+</manifest>

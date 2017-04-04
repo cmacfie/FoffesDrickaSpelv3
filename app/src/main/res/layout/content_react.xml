@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.ReactActivity"
+    tools:showIn="@layout/activity_react">
+
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7e3b4777">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:id="@+id/ActiveLayout"
+            android:weightSum="300">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="70"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rotation="180"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:onClick="onButtonClick_react"
+                    android:layout_weight="20"
+                    android:text="@string/ReactTopButtonWait"
+                    android:id="@+id/ReactTopButton"
+                    android:background="#fdb222"
+                    android:textSize="60sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="160"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/ActiveFrameMiddle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/ReactMiddleTextWait"
+                    android:id="@+id/ReactMiddleText"
+                    android:textSize="80sp"
+                    android:gravity="center"
+                    android:textIsSelectable="true" />
+
+                <minigames.SquareFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/reactImageHolder"
+                    android:layout_gravity="center"
+                    android:layout_margin="45dp">
+
+                    <minigames.SquareImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/reactImage"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"/>
+                </minigames.SquareFrameLayout>
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="70"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:layout_weight="20"
+                    android:text="@string/ReactBottomButtonWait"
+                    android:id="@+id/ReactBottomButton"
+                    android:onClick="onButtonClick_react"
+                    android:background="#37c2f1"
+                    android:textSize="60sp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/StartLayout"
+            android:onClick="onButtonClick_reactStart">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/infoImageReact"
+        android:onClick="onClick_hideImageInfo"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/EndLayout"
+        android:onClick="onButtonClick_nextReactGame">
+
+    </RelativeLayout>
+
+</RelativeLayout>

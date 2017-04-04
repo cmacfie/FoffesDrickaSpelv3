@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.SettingsActivity"
+    tools:showIn="@layout/activity_settings"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dff6ff">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/backgroundImage"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/ActiveLayout"
+        android:weightSum="300">
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/editPlaytersHolder"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Edit Players"
+                android:background="#ff8c8c"
+                android:id="@+id/editPlayersButton"
+                android:layout_gravity="center"
+                android:onClick="onClick_editPlayers" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:id="@+id/numOfDrinksHolder"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:background="#9fd4d4"
+                android:weightSum="100">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="85">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="30"
+                        android:orientation="vertical">
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="15">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Minimum number of drinks"
+                                android:id="@+id/textView2"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp" />
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="15">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Maximum number of drinks"
+                                android:id="@+id/textView5"
+                                android:layout_gravity="left|center_vertical"
+                                android:layout_marginLeft="5dp" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="15">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="30"
+                        android:orientation="vertical">
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="15"
+                            android:layout_margin="5dp">
+                            <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="#ffffff"
+                                android:hint="min"
+                                android:textColor="#000000"
+                                android:inputType="number"
+                                android:textSize="20dp"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/minValue"
+                                android:textIsSelectable="false" />
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="15"
+                            android:layout_margin="5dp">
+                            <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="#ffffff"
+                                android:hint="max"
+                                android:textColor="#000000"
+                                android:inputType="number"
+                                android:textSize="20dp"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text=""
+                                android:id="@+id/maxValue"
+                                android:layout_gravity="bottom|right" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+             </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:id="@+id/editGameTypesHolder"
+            android:layout_weight="300"
+            android:layout_gravity="center_horizontal"
+            android:background="#dfa7a7">
+
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/gamesListView" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

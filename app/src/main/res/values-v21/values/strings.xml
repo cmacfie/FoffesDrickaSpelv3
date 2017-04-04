@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Foffes drickaspel v3</string>
+    <string name="action_settings">Settings</string>
+    <string name="playerButton">Add Player!</string>
+    <string name="foffeiscool">Foffe is cool!</string>
+    <string name="playerName">Name of Player</string>
+    <string name="doneButton">Done!</string>
+    <string name="title_activity_next">NextActivity</string>
+    <string name="whoDrinksBotton">Vem Dricker?</string>
+    <string name="nextDrinkButton">Nästa!</string>
+    <string name="whoDrinksTextView">Vem Dricker?</string>
+    <string name="title_activity_pick_agame">PickAGameActivity</string>
+    <string name="startNewGame">Start!</string>
+    <string name="title_activity_rhyme">RhymeActivity</string>
+    <string name="backButton">Back!</string>
+    <string name="Rhyme">Rhyme!</string>
+    <string name="Start">Start!</string>
+    <string name="drinkBack">Back!</string>
+    <string name="NextButton">Next</string>
+    <string name="infoText">info</string>
+    <string name="Theme">Theme!</string>
+    <string name="topText">Top Text!</string>
+    <string name="bottomText">Bottom Text!</string>
+    <string name="alphabet_game">Alphabet Game!</string>
+    <string name="title_activity_theme">theme</string>
+    <string name="title_activity_guess_word">GuessWordActivity</string>
+    <string name="title_activity_alphabet_game">AlphabetGame</string>
+    <string name="GuessWord">GuessWord</string>
+    <string name="title_activity_story">StoryActivity</string>
+    <string name="Story">Story</string>
+    <string name="title_activity_react">ReactActivity</string>
+    <string name="ReactBottomButtonWait">Wait</string>
+    <string name="ReactTopButtonWait">Wait</string>
+    <string name="ReactMiddleTextWait">3</string>
+</resources>

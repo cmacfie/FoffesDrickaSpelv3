@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.MainMenuActivity"
+    tools:showIn="@layout/activity_main_menu"
+    android:background="#dff6ff">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/backgroundImage"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/ActiveLayout"
+        android:weightSum="300">
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="30"
+            android:id="@+id/resumeGameHolder"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Resume Game"
+                android:id="@+id/resumeGameButton"
+                android:background="#ff8c8c"
+                android:layout_gravity="center"
+                android:onClick="onClick_resumeGame" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="30"
+            android:id="@+id/newGameHolder"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="New Game"
+                android:background="#ff8c8c"
+                android:id="@+id/newGameButton"
+                android:layout_gravity="center"
+                android:onClick="onClick_newGame" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/settingsHolder"
+            android:layout_weight="30"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Settings"
+                android:id="@+id/settingsButton"
+                android:background="#ff8c8c"
+                android:layout_gravity="center"
+                android:onClick="onClick_settings" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

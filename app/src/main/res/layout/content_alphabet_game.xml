@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minigames.AlphabetGameActivity"
+    tools:showIn="@layout/activity_alphabet_game"
+    android:background="#3e9ac9">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7e3e9ac9">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/topText"
+            android:visibility="visible"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/startButton"
+            android:layout_marginBottom="80dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Start"
+            android:id="@+id/startButton"
+            android:background="#ff5c5c"
+            android:padding="10dp"
+            android:textSize="40sp"
+            android:visibility="visible"
+            android:onClick="onClick_alphabetStart"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentStart="false"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottomText"
+            android:id="@+id/bottomText"
+            android:layout_below="@+id/startButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:layout_marginTop="80dp"
+            android:textColor="#ff5d5d"
+            android:textIsSelectable="false"
+            android:visibility="visible"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/NextButton"
+            android:id="@+id/nextButton"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:background="#ffc983"
+            android:onClick="onClick_nextAlphabetGame"/>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:weightSum="300"
+                android:background="#537f7f7f">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/nextTimerImage"
+                        android:layout_gravity="center"
+                        android:alpha="0.5" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/nextTimerButton"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:onClick="onClick_AlphabetResetTimer" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="A"
+                        android:id="@+id/letterTextView"
+                        android:textSize="70sp"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="100" >
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:layout_gravity="top|center_vertical">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/previousLetterImage"
+                                android:rotation="270"
+                                android:layout_weight="50"
+                                android:layout_gravity="top|center_vertical" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/button"
+                                android:background="#00ffffff"
+                                android:nestedScrollingEnabled="false"
+                                android:onClick="onClick_previousLetter" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:layout_gravity="bottom|center_vertical">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/nextLetterImage"
+                                android:rotation="90"
+                                android:layout_weight="50"
+                                android:layout_gravity="center_vertical|bottom" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/button2"
+                                android:background="#00ffffff"
+                                android:onClick="onClick_nextLetter" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01"
+                        android:id="@+id/timerTextView"
+                        android:layout_gravity="center"
+                        android:textSize="50sp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="100">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/increaseButtonImage"
+                                android:layout_weight="50" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/IncreaseButton"
+                                android:background="#00ffffff"
+                                android:nestedScrollingEnabled="false"
+                                android:onClick="onClick_increaseTimer" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/decreaseButtonImage"
+                                android:layout_weight="50" />
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/DecreaseButton"
+                                android:background="#00ffffff"
+                                android:onClick="onClick_decreaseTimer" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/pauseButtonImage"
+                        android:layout_gravity="center"
+                        android:layout_margin="18dp" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/pauseButton"
+                        android:layout_gravity="center"
+                        android:background="#00ffffff"
+                        android:onClick="onClick_startTimer" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alphabet_game"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:autoText="false"
+        android:background="#24000000"
+        android:textAlignment="center"
+        android:textColor="#b4000000"
+        android:textIsSelectable="false"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/infoImageAlphabet"
+        android:scaleType="centerCrop"
+        android:onClick="onClick_hideImageInfo" />
+
+</RelativeLayout>
